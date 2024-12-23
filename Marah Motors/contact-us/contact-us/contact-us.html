@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - Marah Motor</title>
+    <link rel="stylesheet" href="contact-us.css">
+    <script src="contact-us.js" defer></script>
+    <script src="../../navbar.js"></script> <!-- Reference to external JavaScript file -->
+</head>
+<body>
+        <!-- Navigation bar with button-like links and spacing -->
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="../../gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="../../gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="../../gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="../../gallery-cars/ships.html">السفن</a></li>
+                            <li><a href="../../gallery-cars/plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../../services/maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../../services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../../services/suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../../services/car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="../../services/accessories/accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../../services/batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../../services/insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../../services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="contact-us.html">تواصل معنا</a></li>
+                            <li><a href="../location/location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    <section class="contact-us-section">
+        <h1>اتصل بنا</h1>
+        <p>إذا كان لديك أي استفسارات أو تحتاج إلى مساعدة، يرجى ملء النموذج أدناه أو الاتصال بنا مباشرة على الرقم: <strong>+962 7 8570 8558</strong></p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="fullName">الاسم الكامل:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">رسالتك:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">إرسال</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة بيع وشراء - Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to CSS file -->
+    <script defer src="../../navbar.js"></script> 
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <!-- lead to home page -->
+                <a href="/">الصفحه الرئيسيه</a>
+            </li>
+        <ul>
+            <li>
+                <!-- Button link to new "من نحن" content -->
+                <a href="../../about.html">من نحن</a>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="galleryDropdown">
+                    <ul>
+                        <li><a href="../../gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                        <li><a href="../../gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                        <li><a href="../../gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                        <li><a href="../../gallery-cars/ships.html">السفن</a></li>
+                        <li><a href="../../gallery-cars/plans.html">الطائرات</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="servicesDropdown">
+                    <ul>
+                        <li><a href="../maintenance/maintenance.html">الصيانة</a></li>
+                        <li><a href="buy-and-sell.html">بيع وشراء</a></li>
+                        <li><a href="../suggestions/suggestions.html">الاستفسارات</a></li>
+                        <li><a href="../car part/carPart.html">قطع الغيار</a></li>
+                        <li><a href="../accessories/accessories.html">الاكسسوارات</a></li>
+                        <li><a href="../batteries/batteries.html">البطاريات</a></li>
+                        <li><a href="../insurance/insurance.html">التأمين</a></li>
+                        <li><a href="../manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="contactDropdown">
+                    <ul>
+                        <li><a href="../../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                        <li><a href="../../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                        <li><a href="../../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Buy and Sell page with buttons -->
+    <section class="buy-sell-page">
+        <h1>مرحبًا بكم في صفحة بيع وشراء</h1> <!-- Welcome message -->
+
+        <!-- Section with Buy and Sell buttons -->
+        <div class="buy-sell-buttons">
+            <!-- Buy button with image -->
+            <a href="buy.html" class="button"> <!-- Link to the Buy section -->
+                <img src="images/buy.jpeg" alt="Buy Image"> <!-- Image for Buy -->
+                شراء
+            </a>
+
+            <!-- Sell button with image -->
+            <a href="sell.html" class="button"> <!-- Link to the Sell section -->
+                <img src="images/sell.jpeg" alt="Sell Image"> <!-- Image for Sell -->
+                بيع
+            </a>
+        </div>
+    </section>
+</body>
+</html>

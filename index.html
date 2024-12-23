@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to CSS file -->
+    <script src="navbar.js"></script> <!-- Reference to external JavaScript file -->
+</head>
+<body>
+ <!-- Header section with small logo and site name -->
+ <header class="header-with-logo">
+    <img src="logo.jpg" alt="Marah Motor Logo" class="small-logo"> <!-- Small logo -->
+    <h1>Marah Motor</h1> <!-- Site title -->
+</header>
+
+    <!-- Navigation bar with button-like links and spacing -->
+    <nav class="navbar">
+        <ul>
+            <li>
+                <!-- lead to home page -->
+                <a href="index.html">الصفحه الرئيسيه</a>
+            </li>
+        <ul>
+            <li>
+                <!-- Button link to new "من نحن" content -->
+                <a href="about.html">من نحن</a>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="galleryDropdown">
+                    <ul>
+                        <li><a href="gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                        <li><a href="gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                        <li><a href="gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                        <li><a href="gallery-cars/ships.html">السفن</a></li>
+                        <li><a href="gallery-cars/plans.html">الطائرات</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="servicesDropdown">
+                    <ul>
+                        <li><a href="services/maintenance/maintenance.html">الصيانة</a></li>
+                        <li><a href="services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                        <li><a href="services/suggestions/suggestions.html">الاستفسارات</a></li>
+                        <li><a href="services/car part/carPart.html">قطع الغيار</a></li>
+                        <li><a href="services/accessories/accessories.html">الاكسسوارات</a></li>
+                        <li><a href="services/batteries/batteries.html">البطاريات</a></li>
+                        <li><a href="services/insurance/insurance.html">التأمين</a></li>
+                        <li><a href="services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="contactDropdown">
+                    <ul>
+                        <li><a href="contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                        <li><a href="contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                        <li><a href="contact-us/location/location.html">الموقع على الخريطة</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+<!-- New section with text content below the navbar -->
+<section class="company-info">
+    <div class="company-info__text">
+        <p>
+            تم تأسيس شركة Marah Motors على قيم راسخة في الجودة والابتكار. تتمثل هويتنا في تقديم أفضل تجربة للعملاء في مجال صناعة السيارات، حيث نسعى دائمًا لتقديم منتجات عالية الجودة ومبتكرة تلبي احتياجات ورغبات العملاء. نحن نهتم بتوفير خدمات ممتازة تضمن رضا العملاء وتجعلهم يثقون دائمًا بجودة وأداء منتجاتنا. تتمثل رؤيتنا في أن نكون الشركة الرائدة في صناعة السيارات من خلال الابتكار المستمر والجودة العالية، مما يجعلنا خيارًا مفضلًا للعملاء الباحثين عن الأداء والموثوقية.
+        </p>
+        <p>
+            تتميز شركة Marah Motors بالابتكار والتصميم الفريد، حيث نسعى دائمًا لتقديم سيارات تتميز بأحدث التقنيات والميزات المبتكرة. نحن نولي اهتمامًا كبيرًا لتفاصيل التصميم وجودة التصنيع، مما يجعل منتجاتنا تبرز في سوق السيارات. كما نسعى أيضًا لتقديم خدمة عملاء استثنائية، حيث نضع عملائنا في قلب عملياتنا ونسعى جاهدين لتلبية توقعاتهم وتجاوزها.
+        </p>
+    </div>
+</section>
+</body>
+</html>

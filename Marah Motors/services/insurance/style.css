@@ -1,0 +1,125 @@
+/* Add all your styles here */
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Additional styles as needed */
+/* Navigation bar styling */
+.navbar {
+    background-color: #333; /* Dark background */
+    padding: 10px; /* Padding for spacing */
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Separate first and last items */
+    align-items: center; /* Align items in the middle */
+    text-align: right; /* Text alignment for RTL */
+}
+
+.navbar ul {
+    list-style-type: none; /* No bullets */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Content aligned to the right */
+}
+
+.navbar li {
+    display: inline-block; /*keep horizontal alignment*/
+    color: white; /* White text */
+    margin-right: 20px; /* space between navigation items*/
+    font-size: 18px; /* Text size */
+    position: relative; /* Necessary for dropdown positioning */
+}
+
+
+
+/* Styling for button-like links */
+.navbar a {
+    background-color: grey; /* Grey background for button shape */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth hover and press transitions */
+}
+
+.navbar a:hover {
+    background-color: darkgrey; /* Darker grey on hover */
+}
+
+.navbar a:active {
+    transform: scale(0.95); /* Press effect */
+}
+
+/* Styling for the dropdown animation */
+.dropdown {
+    display: none; /* Initially hidden */
+    background-color: #444; /* Dark background */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Position dropdown relative to parent */
+    padding: 10px; /* Padding for spacing */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+    animation: fadeIn 0.3s; /* Animation effect */
+    right: 0; /* align dropdown to the right */
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Styling for dropdown lists */
+.dropdown ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    display: flex; /* Horizontal layout */
+    flex-direction: column; /* Vertical direction */
+}
+
+.dropdown li {
+    font-size: 18px; /* Smaller font size to avoid overlap */
+    margin-bottom: 10px; /* Space between items */
+    white-space: nowrap; /* Prevents text from breaking lines */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds '...' to overflowing text */
+}
+
+.dropdown li:last-child {
+    margin-bottom: 0; /* Remove extra space for the last item */
+}

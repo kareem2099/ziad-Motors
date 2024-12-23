@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيارات الصغيرة - Marah Motor</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="searchCars.js"></script> <!-- Use "defer" to ensure proper loading -->
+    <script defer src="../navbar.js"></script> 
+</head>
+<body>
+    <!-- Section for welcome message and search -->
+    <section class="welcome-section">
+        <div class="welcome-section__message">
+            مرحبًا بكم في قسم السيارات الصغيرة، حيث يمكنكم العثور على السيارات المناسبة لأذواقكم واختياراتكم.
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="ships.html">السفن</a></li>
+                            <li><a href="plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../services/maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../services/suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../services/car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="../services/accessories/accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../services/batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../services/insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                            <li><a href="../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="welcome-section__search">
+            <input type="text" id="car-search" placeholder="ابحث عن سيارة..." /> <!-- Self-closing tags for input elements -->
+            <select id="sort-criteria">
+                <option value="price-high-to-low">السعر من الأعلى إلى الأدنى</option>
+                <option value="price-low-to-high">السعر من الأدنى إلى الأعلى</option>
+                <option value="newest-first">الأحدث أولاً</option>
+            </select>
+            <button id="search-button">ابحث</button> <!-- ID for event handling -->
+        </div>
+    </section>
+
+    <!-- Gallery section for displaying cars -->
+    <section class="gallery">
+        <!-- Example gallery item -->
+        <div class="gallery__item">
+            <img src="images/small-cars/car1.jpg" alt="2024 Honda Civic Type R" />
+            <div class="gallery__info">
+                <h3>2024 Honda Civic Type R</h3>
+                <p>Price: $12</p>
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Honda%20Civic%20Type%20R&price=12&img=../../../gallery-cars/images/small-cars/car1.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Additional gallery items -->
+        <div class="gallery__item">
+            <img src="images/small-cars/car2.jpg" alt="2024 Volkswagen GTI" />
+            <div class="gallery__info">
+                <h3>2024 Volkswagen GTI</h3>
+                <p>Price: $31</p>
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Volkswagen%20GTI&price=31&img=../../../gallery-cars/images/small-cars/car2.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Additional gallery items with consistent structure -->
+        <div class="gallery__item">
+            <img src="images/small-cars/car3.jpg" alt="024 Hyundai Elantra Hybrid"> <!-- Corrected image path -->
+            <div class="gallery__info">
+                <h3>2024 Hyundai Elantra Hybrid</h3> <!-- Car name -->
+                <p>Price: $26</p> <!-- Car price -->
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Hyundai%20Elantra%20Hybrid&price=26&img=../../../gallery-cars/images/small-cars/car3.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- Additional gallery items -->
+         <div class="gallery__item">
+            <img src="images/small-cars/car4.jpg" alt="2023 Kia Rio"> <!-- Corrected image path -->
+            <div class="gallery__info">
+                <h3>2023 Kia Rio</h3> <!-- Car name -->
+                <p>Price: $16</p> <!-- Car price -->
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2023%20Kia%20Rio&price=16&img=../../../gallery-cars/images/small-cars/car4.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Additional gallery items -->
+        <div class="gallery__item">
+            <img src="images/small-cars/car5.jpg" alt="2023 Chevrolet Bolt"> <!-- Corrected image path -->
+            <div class="gallery__info">
+                <h3>2023 Chevrolet Bolt</h3> <!-- Car name -->
+                <p>Price: $26</p> <!-- Car price -->
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2023%20Chevrolet%20Bolt&price=26&img=../../../gallery-cars/images/small-cars/car5.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

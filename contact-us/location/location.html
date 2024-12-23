@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع - Marah Motor</title>
+    <link rel="stylesheet" href="location.css">
+    <script src="../../navbar.js"></script> <!-- Reference to external JavaScript file -->
+</head>
+<body>
+        <!-- Navigation bar with button-like links and spacing -->
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="../../gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="../../gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="../../gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="../../gallery-cars/ships.html">السفن</a></li>
+                            <li><a href="../../gallery-cars/plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../../services/maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../../services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../../services/suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../../services/car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="../../services/accessories/accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../../services/batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../../services/insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../../services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="../contact-us/contact-us.html">تواصل معنا</a></li>
+                            <li><a href="location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    <section class="location-section">
+        <h1>موقعنا</h1>
+        <p>يمكنك زيارتنا في الموقع التالي:</p>
+        <div id="map-container">
+            <!-- The map can be embedded here -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.513709708487!2d35.93135931516469!3d31.96315848121875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5b776f1453d7%3A0x6f3b84b7392a4b77!2sMarah%20Motor!5e0!3m2!1sar!2sjo!4v1614771234567"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+        <div class="contact-details">
+            <h2>تفاصيل الاتصال</h2>
+            <p>هاتف: +962 7 8570 8558</p>
+            <p>البريد الإلكتروني: info@marahmotor.com</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to your CSS -->
+    <script src="navbar.js"></script> <!-- Reference to external JavaScript file -->
+
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header-with-logo">
+        <h1>Marah Motor</h1> <!-- Site title -->
+    </header>
+
+     <!-- Navigation bar with button-like links and spacing -->
+     <nav class="navbar">
+        <ul>
+            <li>
+                <!-- lead to home page -->
+                <a href="/">الصفحه الرئيسيه</a>
+            </li>
+        <ul>
+            <li>
+                <!-- Button link to new "من نحن" content -->
+                <a href="about.html">من نحن</a>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="galleryDropdown">
+                    <ul>
+                        <li><a href="gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                        <li><a href="gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                        <li><a href="gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                        <li><a href="gallery-cars/ships.html">السفن</a></li>
+                        <li><a href="gallery-cars/plans.html">الطائرات</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="servicesDropdown">
+                    <ul>
+                        <li><a href="services/maintenance/maintenance.html">الصيانة</a></li>
+                        <li><a href="services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                        <li><a href="services/suggestions/suggestions.html">الاستفسارات</a></li>
+                        <li><a href="services/car part/carPart.html">قطع الغيار</a></li>
+                        <li><a href="services/accessories/accessories.html">الاكسسوارات</a></li>
+                        <li><a href="services/batteries/batteries.html">البطاريات</a></li>
+                        <li><a href="services/insurance/insurance.html">التأمين</a></li>
+                        <li><a href="services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="contactDropdown">
+                    <ul>
+                        <li><a href="contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                        <li><a href="contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                        <li><a href="contact-us/location/location.html">الموقع على الخريطة</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- About Us section with content and an image -->
+    <section class="about-us-section">
+        <div class="about-us-content">
+            <h1>من نحن</h1>
+            <p>نحن في [مرح موتورز] نفخر بأن نكون شركة رائدة في صناعة السيارات، حيث نقدم مجموعة متنوعة من السيارات التي تجمع بين الجودة والأداء والأناقة. سواء كنت تبحث عن سيارة عائلية مريحة، أو سيارة رياضية فاخرة، أو حتى سيارة كهربائية صديقة للبيئة، فإن لدينا ما يلبي جميع احتياجاتك.</p>
+            <p>نحرص على توفير تجربة فريدة لعملائنا من خلال تقديم خدمات متميزة تشمل مبيعات السيارات الجديدة والمستعملة، وصيانة وخدمات ما بعد البيع، بالإضافة إلى خيارات تمويل مرنة.</p>
+            <p>في [مرح موتورز]، نضع رضا العميل في مقدمة أولوياتنا. فريقنا من الخبراء مستعد دائمًا للإجابة عن استفساراتكم ومساعدتكم في اختيار السيارة المثالية. نرحب بكم لزيارة معارضنا للتعرف على مجموعتنا الواسعة من السيارات واختبار الأداء والجودة التي نقدمها.</p>
+        </div>
+
+        <!-- About Us image -->
+        <div class="about-us-image">
+            <img src="about-us.jpeg" alt="فريق العمل" /> <!-- Display an image -->
+        </div>
+    </section>
+
+    <!-- Footer section (can be filled with footer content) -->
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+</body>
+</html>

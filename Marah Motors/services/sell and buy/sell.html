@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة البيع - Marah Motor</title>
+    <link rel="stylesheet" href="sell.css"> <!-- Reference to CSS -->
+    <script defer src="upload.js"></script> <!-- JavaScript to handle image upload -->
+</head>
+<body>
+    <!-- Container to center content -->
+    <div class="container">
+        <!-- Sell section with form to upload image -->
+        <section id="sell">
+            <h2>السلام عليكم في صفحة البيع</h2> <!-- Welcome message for Sell -->
+            <p>حمل صور سيارتك التي تريد أن تبيعها لكي يتم تسعيرها من خلال فريق كامل بأفضل سعر.</p> <!-- Instructions for selling -->
+            
+            <!-- Form to upload car image -->
+            <form id="upload-form" enctype="multipart/form-data">
+                <label for="car-image">اختر صورة السيارة:</label>
+                <input type="file" id="car-image" name="car-image" accept="image/*" required> <!-- Input for image upload -->
+                <button type="submit">أرسل</button> <!-- Submit button -->
+            </form>
+        </section>
+    </div>
+</body>
+</html>

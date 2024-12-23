@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لقطع الغيار- Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to CSS file -->
+    <script src="searchCars.js"></script> <!-- Reference to external JavaScript file -->
+    <script defer src="../../navbar.js"></script> 
+</head>
+<body>
+    <!-- Welcome section with search bar -->
+    <section class="welcome-section">
+        <div class="welcome-message">
+            مرحبا بكم ف قسم قطع الغيار حيث يوجد قسم ما تريدونه من قطع الغيار المناسبه لازواقكم واختياراتكم
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="../../gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="../../gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="../../gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="../../gallery-cars/ships.html">السفن</a></li>
+                            <li><a href="../../gallery-cars/plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="../../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                            <li><a href="../../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="search-bar">
+            <!-- Search input -->
+            <input type="text" id="car-search" placeholder="ابحث عن قطع الغيار..."> 
+            <!-- Sorting criteria dropdown -->
+            <select id="sort-criteria">
+                <option value="price-high-to-low">السعر من الأعلى إلى الأدنى</option>
+                <option value="price-low-to-high">السعر من الأدنى إلى الأعلى</option> <!-- New option -->
+                <option value="newest-first">الأحدث أولاً</option>
+            </select>
+            <!-- Search button -->
+            <button onclick="searchCars()">ابحث</button>
+        </div>
+    </section>
+
+    <!-- Gallery section for cars -->
+    <section class="gallery">
+        <!-- Gallery item with image, car name, price, and buy button -->
+        <div class="gallery-item">
+            <img src="images/ac1.webp" alt="Car 1"> <!-- Car image -->
+            <div class="car-info">
+                <h3>OTO KOR Rear Shock Absorber Korean</h3> <!-- Car name -->
+                <p>Price: $5</p> <!-- Car price -->
+                <a href="/services/car%20part/carPart.html?name=2024%20Mercedes%20GLB&price=5&img=/services/car%20part/images/part1.webp" class="buy-now">Buy Now</a> <!-- Buy Now button -->
+            </div>
+        </div>
+        
+        <!-- More gallery items -->
+        <div class="gallery-item">
+            <img src="images/ac2.webp" alt="Car 2">
+            <div class="car-info">
+                <h3>DONGIL Drive Belt Korean</h3>
+                <p>Price: $10</p>
+                <a href="/services/car%20part/carPart.html?name=2024%20Kia%20Sorento&price=10&img=../images/part2.webp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery-item">
+            <img src="images/ac3.webp" alt="Car 3">
+            <div class="car-info">
+                <h3>Timing Belt</h3>
+                <p>Price: $6 </p>
+                <a href="/services/car%20part/carPart.html?name=2024%20Land%20Rover%20Discovery&price=6&img=../images/part3.webp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery-item">
+            <img src="images/ac4.webp" alt="Car 4">
+            <div class="car-info">
+                <h3>CTR Set Stabilizer Link Front Korean</h3>
+                <p>Price: $9 </p>
+                <a href="./services/car%20part/carPart.html?name=2024%20BMW%20X7&price=9&img=../images/part4.webp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- More gallery items -->
+        <div class="gallery-item">
+            <img src="images/ac5.webp" alt="Car 5">
+            <div class="car-info">
+                <h3>After-Market Tie Rod Set Inner Korean</h3>
+                <p>Price: $11 </p>
+                <a href="/services/car%20part/carPart.html?name=2024%20Volvo%20XC90&price=11&img=../images/part5.webp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Continue with other gallery items... -->
+    </section>
+</body>
+</html>

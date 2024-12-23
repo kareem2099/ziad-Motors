@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيارات الكبيرة - Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to CSS file -->
+    <script defer src="searchCars.js"></script> <!-- Reference to external JavaScript file -->
+    <script defer src="../navbar.js"></script> 
+</head>
+<body>
+    <!-- Welcome section with search bar -->
+    <section class="welcome-section">
+        <div class="welcome-section__message">
+            مرحبا بكم ف قسم السيارات الكبيرة حيث يوجد قسم ما تريدونه من السيارات الكبيرة المناسبه لازواقكم واختياراتكم
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="ships.html">السفن</a></li>
+                            <li><a href="plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../services/maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../services/suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../services/car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="../services/accessories/accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../services/batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../services/insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                            <li><a href="../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="welcome-section__search">
+            <input type="text" id="car-search" placeholder="ابحث عن سيارة..." /> <!-- Self-closing tags for input elements -->
+            <!-- Sorting criteria dropdown -->
+            <select id="sort-criteria">
+                <option value="price-high-to-low">السعر من الأعلى إلى الأدنى</option>
+                <option value="price-low-to-high">السعر من الأدنى إلى الأعلى</option> <!-- New option -->
+                <option value="newest-first">الأحدث أولاً</option>
+            </select>
+            <!-- Search button -->
+            <button id="search-button">ابحث</button>
+        </div>
+    </section>
+
+    <!-- Gallery section for cars -->
+    <section class="gallery">
+        <!-- Gallery item with image, car name, price, and buy button -->
+        <div class="gallery__item">
+            <img src="images/big-cars/car1.webp" alt="2024 Mercedes GLB"> <!-- Car image -->
+            <div class="gallery__info">
+                <h3>2024 Mercedes GLB</h3> <!-- Car name -->
+                <p>Price: $38.780</p> <!-- Car price -->
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Mercedes%20GLB&price=38780&img=../../../gallery-cars/images/big-cars/car1.webp" class="gallery__buy-now">Buy Now</a> <!-- Buy Now button -->
+            </div>
+        </div>
+        
+        <!-- More gallery items -->
+        <div class="gallery__item">
+            <img src="images/big-cars/car2.webp" alt="2024 Kia Sorento">
+            <div class="gallery__info">
+                <h3>2024 Kia Sorento</h3>
+                <p>Price: $42.056 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Kia%20Sorento&price=42056&img=../../../gallery-cars/images/big-cars/car2.webp" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery__item">
+            <img src="images/big-cars/car3.webp" alt="2024 Land Rover Discovery">
+            <div class="gallery__info">
+                <h3>2024 Land Rover Discovery</h3>
+                <p>Price: $57.679 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Land%20Rover%20Discovery&price=57679&img=../../../gallery-cars/images/big-cars/car3.webp" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery__item">
+            <img src="images/big-cars/car4.webp" alt="2024 BMW X7">
+            <div class="gallery__info">
+                <h3>2024 BMW X7</h3>
+                <p>Price: $81.376 </p>
+                <a href="./services/sell%20and%20buy/buy.html?type=car&name=2024%20BMW%20X7&price=81376&img=../../../gallery-cars/images/big-cars/car4.webp" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- More gallery items -->
+        <div class="gallery__item">
+            <img src="images/big-cars/car5.webp" alt="2024 Volvo XC90">
+            <div class="gallery__info">
+                <h3>2024 Volvo XC90</h3>
+                <p>Price: $60.433 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=car&name=2024%20Volvo%20XC90&price=60433&img=../../../gallery-cars/images/big-cars/car5.webp" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Continue with other gallery items... -->
+    </section>
+</body>
+</html>

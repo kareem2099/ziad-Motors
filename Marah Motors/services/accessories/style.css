@@ -1,0 +1,173 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome section styles */
+.welcome-section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-section__message {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.welcome-section__search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.welcome-section__search input,
+.welcome-section__search select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.welcome-section__search button {
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.welcome-section__search button:hover {
+    background-color: darkgrey;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+.gallery__item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gallery__item img {
+    width: 100%; /* Full width */
+}
+
+.gallery__info {
+    padding: 10px;
+}
+
+.gallery__buy-now {
+    display: block;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.gallery__buy-now:hover {
+    background-color: darkgrey;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #333; /* Dark background */
+    padding: 10px; /* Padding for spacing */
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Separate first and last items */
+    align-items: center; /* Align items in the middle */
+    text-align: right; /* Text alignment for RTL */
+}
+
+.navbar ul {
+    list-style-type: none; /* No bullets */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Content aligned to the right */
+}
+
+.navbar li {
+    display: inline-block; /*keep horizontal alignment*/
+    color: white; /* White text */
+    margin-right: 20px; /* space between navigation items*/
+    font-size: 18px; /* Text size */
+    position: relative; /* Necessary for dropdown positioning */
+}
+
+
+
+/* Styling for button-like links */
+.navbar a {
+    background-color: grey; /* Grey background for button shape */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth hover and press transitions */
+}
+
+.navbar a:hover {
+    background-color: darkgrey; /* Darker grey on hover */
+}
+
+.navbar a:active {
+    transform: scale(0.95); /* Press effect */
+}
+
+/* Styling for the dropdown animation */
+.dropdown {
+    display: none; /* Initially hidden */
+    background-color: #444; /* Dark background */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Position dropdown relative to parent */
+    padding: 10px; /* Padding for spacing */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+    animation: fadeIn 0.3s; /* Animation effect */
+    right: 0; /* align dropdown to the right */
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Styling for dropdown lists */
+.dropdown ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    display: flex; /* Horizontal layout */
+    flex-direction: column; /* Vertical direction */
+}
+
+.dropdown li {
+    font-size: 18px; /* Smaller font size to avoid overlap */
+    margin-bottom: 10px; /* Space between items */
+    white-space: nowrap; /* Prevents text from breaking lines */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds '...' to overflowing text */
+}
+
+.dropdown li:last-child {
+    margin-bottom: 0; /* Remove extra space for the last item */
+}

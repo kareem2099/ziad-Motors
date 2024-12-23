@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طريقة الصنع - Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to your CSS file -->
+    <script src="manufacturing.js"></script> <!-- Script for handling image upload and progress -->
+    <script defer src="../../navbar.js"></script> 
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <!-- lead to home page -->
+                <a href="/">الصفحه الرئيسيه</a>
+            </li>
+        <ul>
+            <li>
+                <!-- Button link to new "من نحن" content -->
+                <a href="../../about.html">من نحن</a>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="galleryDropdown">
+                    <ul>
+                        <li><a href="../../gallery-cars/small-cars.html">السيارات الصغيرة</a></li>
+                        <li><a href="../../gallery-cars/medium-cars.html">السيارات المتوسطة</a></li>
+                        <li><a href="../../gallery-cars/big-cars.html">السيارات الكبيرة</a></li>
+                        <li><a href="../../gallery-cars/ships.html">السفن</a></li>
+                        <li><a href="../../gallery-cars/plans.html">الطائرات</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="servicesDropdown">
+                    <ul>
+                        <li><a href="../maintenance/maintenance.html">الصيانة</a></li>
+                        <li><a href="../sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                        <li><a href="../suggestions/suggestions.html">الاستفسارات</a></li>
+                        <li><a href="../car part/carPart.html">قطع الغيار</a></li>
+                        <li><a href="../accessories/accessories.html">الاكسسوارات</a></li>
+                        <li><a href="../batteries/batteries.html">البطاريات</a></li>
+                        <li><a href="../insurance/insurance.html">التأمين</a></li>
+                        <li><a href="manufacturingProcess.html">طريقة الصنع</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Button that triggers the dropdown -->
+                <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                <!-- Dropdown with fade-in animation and spacing -->
+                <div class="dropdown" id="contactDropdown">
+                    <ul>
+                        <li><a href="../../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                        <li><a href="../../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                        <li><a href="../../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Section for the manufacturing process -->
+    <section class="manufacturing-process">
+        <!-- Form to upload an image -->
+        <div class="upload-section">
+            <p>السلام عليكم في قسم التصليح حيث يوجد في هذا القسم سيارتك التي تريد إصلاحها وتتبع كل شيء من أول دخولها لحد استلامها لحضرتك.</p>
+            <form id="upload-form">
+                <label for="car-image">حمل صورة السيارة التي تريد إصلاحها:</label>
+                <input type="file" id="car-image" name="car-image" accept="image/*" required>
+                <button type="submit">أرسل</button>
+            </form>
+        </div>
+
+        <!-- Progress bar for tracking the repair process -->
+        <div class="progress-bar" id="progress-bar">
+            <div class="progress-point" id="point-1">اليوم الذي تم مراجعة السيارة</div> <!-- Date of upload -->
+            <div class="progress-point" id="point-2">وصول المندوب</div> <!-- Arrival of representative -->
+            <div class="progress-point" id="point-3">معاينة السيارة</div> <!-- Inspection of the car -->
+            <div class="progress-point" id="point-4">تم إصلاح السيارة بنجاح</div> <!-- Successful repair -->
+        </div>
+    </section>
+</body>
+</html>

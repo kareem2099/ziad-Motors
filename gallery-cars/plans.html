@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطائرات - Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to CSS file -->
+    <script defer src="searchCars.js"></script> <!-- Reference to external JavaScript file -->
+    <script defer src="../navbar.js"></script> 
+</head>
+<body>
+    <!-- Welcome section with search bar -->
+    <section class="welcome-section">
+        <div class="welcome-section__message">
+            مرحبا بكم ف قسم الطائرات حيث يوجد قسم ما تريدونه من الطائرات المناسبه لازواقكم واختياراتكم
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="ships.html">السفن</a></li>
+                            <li><a href="plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../services/maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../services/suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../services/car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="../services/accessories/accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../services/batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../services/insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                            <li><a href="../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="welcome-section__search">
+            <!-- Search input -->
+            <input type="text" id="car-search" placeholder="ابحث عن طيارة..." /> 
+            <!-- Sorting criteria dropdown -->
+            <select id="sort-criteria">
+                <option value="price-high-to-low">السعر من الأعلى إلى الأدنى</option>
+                <option value="price-low-to-high">السعر من الأدنى إلى الأعلى</option> <!-- New option -->
+                <option value="newest-first">الأحدث أولاً</option>
+            </select>
+            <!-- Search button -->
+            <button id="search-button">ابحث</button>
+        </div>
+    </section>
+
+    <!-- Gallery section for plans -->
+    <section class="gallery">
+        <!-- Gallery item with image, plan name, price, and buy button -->
+        <div class="gallery__item">
+            <img src="images/plans/plan1.jpg" alt="plan 1"> <!-- plan image -->
+            <div class="gallery__item">
+                <h3>2023 King Air 360</h3> <!-- plan name -->
+                <p>Price: $20</p> <!-- plan price -->
+                <a href="/services/sell%20and%20buy/buy.html?type=plane&name=2023%20King%20Air%20360&price=20&img=../../../gallery-cars/images/plans/plan1.jpg" class="gallery__buy-now">Buy Now</a> <!-- Buy Now button -->
+            </div>
+        </div>
+        
+        <!-- More gallery items -->
+        <div class="gallery__item">
+            <img src="images/plans/plan2.jpg" alt="plan 2">
+            <div class="gallery__item">
+                <h3>2016 Cirrus SR22 G5 GTS</h3>
+                <p>Price: $32 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=plane&name=2016%20Cirrus%20SR22%20G5%20GTS&price=32&img=../../../gallery-cars/images/plans/plan2.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery__item">
+            <img src="images/plans/plan3.jpg" alt="plan 3">
+            <div class="gallery__item">
+                <h3>2021 Cirrus SR20 G6</h3>
+                <p>Price: $12 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=plane&name=2021%20Cirrus%20SR20%20G6&price=12&img=../../../gallery-cars/images/plans/plan3.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery__item">
+            <img src="images/plans/plan4.jpg" alt="plan 4">
+            <div class="gallery__item">
+                <h3>2021 Cirrus SR20 G6</h3>
+                <p>Price: $32 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=plane&name=2021%20Cirrus%20SR20%20G6&price=32&img=../../../gallery-cars/images/plans/plan4.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- More gallery items -->
+        <div class="gallery__item">
+            <img src="images/plans/plan5.jpg" alt="plan 5">
+            <div class="gallery__item">
+                <h3>1975 Cessna 421B</h3>
+                <p>Price: $70 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=plane&name=1975%20Cessna%20421B&price=70&img=../../../gallery-cars/images/plans/plan5.jpg" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Continue with other gallery items... -->
+    </section>
+</body>
+</html>

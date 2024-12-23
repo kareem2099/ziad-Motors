@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السفن - Marah Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reference to CSS file -->
+    <script src="searchCars.js"></script> <!-- Reference to external JavaScript file -->
+    <script defer src="../navbar.js"></script> 
+</head>
+<body>
+    <!-- Welcome section with search bar -->
+    <section class="welcome-section">
+        <div class="welcome-section__message">
+            مرحبا بكم ف قسم السفن حيث يوجد قسم ما تريدونه من السفن المناسبه لازواقكم واختياراتكم
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <!-- lead to home page -->
+                    <a href="/">الصفحه الرئيسيه</a>
+                </li>
+            <ul>
+                <li>
+                    <!-- Button link to new "من نحن" content -->
+                    <a href="../about.html">من نحن</a>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('galleryDropdown')">المعرض</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="galleryDropdown">
+                        <ul>
+                            <li><a href="small-cars.html">السيارات الصغيرة</a></li>
+                            <li><a href="medium-cars.html">السيارات المتوسطة</a></li>
+                            <li><a href="big-cars.html">السيارات الكبيرة</a></li>
+                            <li><a href="ships.html">السفن</a></li>
+                            <li><a href="plans.html">الطائرات</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">الخدمات</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="servicesDropdown">
+                        <ul>
+                            <li><a href="../services/maintenance/maintenance.html">الصيانة</a></li>
+                            <li><a href="../services/sell and buy/buy-and-sell.html">بيع وشراء</a></li>
+                            <li><a href="../services/suggestions/suggestions.html">الاستفسارات</a></li>
+                            <li><a href="../services/car part/carPart.html">قطع الغيار</a></li>
+                            <li><a href="../services/accessories/accessories.html">الاكسسوارات</a></li>
+                            <li><a href="../services/batteries/batteries.html">البطاريات</a></li>
+                            <li><a href="../services/insurance/insurance.html">التأمين</a></li>
+                            <li><a href="../services/manufacturing-process/manufacturingProcess.html">طريقة الصنع</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- Button that triggers the dropdown -->
+                    <a href="javascript:void(0);" onclick="toggleDropdown('contactDropdown')">اتصل بنا</a>
+                    <!-- Dropdown with fade-in animation and spacing -->
+                    <div class="dropdown" id="contactDropdown">
+                        <ul>
+                            <li><a href="../contact-us/complaints/complaints.html">للشكاوى والإقتراحات</a></li>
+                            <li><a href="../contact-us/contact-us/contact-us.html">تواصل معنا</a></li>
+                            <li><a href="../contact-us/location/location.html">الموقع على الخريطة</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="welcome-section__search">
+            <!-- Search input -->
+            <input type="text" id="car-search" placeholder="ابحث عن سفينة..."> 
+            <!-- Sorting criteria dropdown -->
+            <select id="sort-criteria">
+                <option value="price-high-to-low">السعر من الأعلى إلى الأدنى</option>
+                <option value="price-low-to-high">السعر من الأدنى إلى الأعلى</option> <!-- New option -->
+                <option value="newest-first">الأحدث أولاً</option>
+            </select>
+            <!-- Search button -->
+            <button id="search-button">ابحث</button>
+        </div>
+    </section>
+
+    <!-- Gallery section for ships -->
+    <section class="gallery">
+        <!-- Gallery item with image, ship name, price, and buy button -->
+        <div class="gallery__item">
+            <img src="images/ships/ship1.png" alt="ship 1"> <!-- ship image -->
+            <div class="gallery__info">
+                <h3>1998 CHINA BLT HANDY</h3> <!-- ship name -->
+                <p>Price: $40 </p> <!-- ship price -->
+                <a href="/services/sell%20and%20buy/buy.html?type=ship&name=1998%20CHINA%20BLT%20HANDY&price=40&img=../../../gallery-cars/images/ships/ship1.png" class="gallery__buy-now">Buy Now</a> <!-- Buy Now button -->
+            </div>
+        </div>
+        
+        <!-- More gallery items -->
+        <div class="gallery__item">
+            <img src="images/ships/ship2.png" alt="ship 2">
+            <div class="gallery__info">
+                <h3>2005 CHR BLT BOX HOLD shipGO SHIP</h3>
+                <p>Price: $18 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=ship&name=2005%20CHR%20BLT%20BOX%20HOLD%20GO%20SHIP&price=180&img=../../../gallery-cars/images/ships/ship2.png" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery__item">
+            <img src="images/ships/ship3.png" alt="ship 3">
+            <div class="gallery__info">
+                <h3>2009 CHR BLT GEARED GC</h3>
+                <p>Price: $22 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=ship&name=2009%20CHR%20BLT%20GEARED%20GC&price=22&img=../../../gallery-cars/images/ships/ship3.png" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+         <!-- More gallery items -->
+         <div class="gallery__item">
+            <img src="images/ships/ship4.png" alt="ship 4">
+            <div class="gallery__info">
+                <h3>2010 BLT / 14445 DWT / 15190 CBM / HANDY TANKER - SEASIA</h3>
+                <p>Price: $10 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=ship&name=2010%20BLT%20HANDY%20TANKER&price=10&img=../../../gallery-cars/images/ships/ship4.png" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- More gallery items -->
+        <div class="gallery__item">
+            <img src="images/ships/ship5.png" alt="ship 5">
+            <div class="gallery__info">
+                <h3>2003 JPN BLT / 20810 DWT / 21715 CBM / HANDY CHEM TANKER - CARIBS</h3>
+                <p>Price: $13 </p>
+                <a href="/services/sell%20and%20buy/buy.html?type=ship&name=2003%20JPN%20BLT%20HANDY%20CHEM%20TANKER&price=13&img=../../../gallery-cars/images/ships/ship5.png" class="gallery__buy-now">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Continue with other gallery items... -->
+    </section>
+</body>
+</html>
